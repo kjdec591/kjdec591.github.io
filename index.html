@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Zombie Killer!</title>
+    <script src="js/phaser-1.1.6.js"></script>
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+	<script src="js/Game.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="gameContainer"></div>
+<script type="text/javascript">
+
+window.onload = function(){
+	var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameContainer');
+	
+	game.state.add('Boot', BasicGame.Boot);
+	game.state.add('Preloader', BasicGame.Preloader);
+	game.state.add('MainMenu', BasicGame.MainMenu);
+	game.state.add('Game', BasicGame.Game);
+	
+	game.state.start('Boot');
+};
+</script>
+<div id="readme">
+<h2>Zombie Killer</h2>
+<ul>
+
+<li><strong>High Concept:</strong>
+Shoot as many zombies as you can to try to get to the safehouse, and don't get eaten.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+Players should feel pressured to shoot the zombies before they reach them.
+</li>
+
+<li><strong>Genre:</strong>
+Zombie Killer is a zombie rail shooter.
+</li>
+
+<li><strong>Game play:</strong>
+Controls:
+	arrow keys move the cursor up, down, left and right.
+	spacebar fires your gun and triggers the collision handler.
+System:
+	On the hud you can see your health, ammo, and a visualization of the doctor. As you take damage so does the doctor. The core mechanic is aiming at the zombies and shooting to eliminate them. While ammo is scarce if you shoot 40 zombies you will get some bonus ammo. Adding multiple weapon bonuses and more levels would be great additions to complete this game.
+</li>
+
+<li><strong>Prototype goal:</strong>
+This prototype is examining rail shooter mechanics and playing with ways to simulate damage taken and shooting the gun. Later I would like to simulate an old FMV game.
+</li>
+
+<li><strong>Features:</strong>
+A unique aspect of this game is that you can see the player and the damage he takes as he gets overran by zombies.
+</li>
+
+<li><strong>Setting/Premise:</strong>
+You are Dr. Willingsby one of the most brilliant people of the 22nd Century. You are working with mutated bacteria at a top secret facility looking for a way to prolong life. Your company ensures you that there are safe guards in place for an outbreak. When you realise that an infected rat bit a colleague you immediately began your own backup plans. 
+While the zombie genre is rather played out this game is still fun and if the story is polished it can be unique and grip the player.
+</li>
+
+<li><strong>Story:</strong>
+You are a Scientist who worked at a facility that was working with a zombie virus, when of course it was released and started the zombie apocalypse. You are fleeing from the facility in the prototype through the woods to the safe house.
+
+</li>
+
+<li><strong>Target Audience:</strong>
+The target audience is older college age gamers that want a throwback to retro rail shooters like Area 51 or Time Crisis
+</li>
+
+<li><strong>Play time:</strong>
+The prototype takes a minute or two to play
+</li>
+
+<li><strong>Strategies:</strong>
+Players will want to conserve ammo when possible and let zombies on the left side go off screen as they will die and not hurt the player.
+</li>
+
+<li><strong>Estimated Schedule:</strong>
+With the basic game play and coding done a few days would allow for more brainstorming to expand on a menu or power ups. A couple days to implement the ideas from the brainstorm. A few more days would allow to make multiple levels and possible boss fights. Finally a week to play test and polish to a finished product.
+</li>
+
+<li><strong>Team:</strong>
+I am a capable programmer with good troubleshooting skills. I am familiar with graphic design software like photoshop, however I lack much experience in such and am not a great artist. The only thing I would want in a partner is someone who can carry their weight in the group, and hopefully someone who can do the art side of things.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+All of my assets are off of opengameart.org there are a lot of them
+
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+This game is similar in game mechanics to games like Area 51 or Time Crisis.
+</li>
+
+</ul>
+</div>
+</body>
+</html>
